@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<com.google.ads.AdView android:id="@+id/adView"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_alignParentTop="true" ads:adUnitId="a14e15da850156a"
+		ads:adSize="BANNER" ads:loadAdOnCreate="false" />
+
+	<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/scroll" android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="vertical" android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+
+			<TableRow android:orientation="horizontal"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:id="@+id/tableRowText" android:visibility="visible"
+				android:layout_gravity="fill_horizontal|bottom">
+
+				<ImageView android:id="@+id/ImageViewOne"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:layout_weight="1" />
+
+				<ImageView android:id="@+id/ImageViewTwo"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:layout_weight="1" />
+			</TableRow>
+			<TextView android:text="Click Either Image To Select a new Photo"
+				android:id="@+id/middletext" android:layout_width="fill_parent"
+				android:layout_height="wrap_content"></TextView>
+
+			<TableRow android:orientation="horizontal"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:id="@+id/tableRowTextTwo" android:visibility="visible"
+				android:layout_gravity="fill_horizontal|bottom">
+				<Spinner android:layout_width="fill_parent"
+					android:layout_weight="1" android:layout_height="wrap_content"
+					android:id="@+id/leftpercentage">
+				</Spinner>
+
+				<Spinner android:layout_width="fill_parent"
+					android:layout_weight="1" android:layout_height="wrap_content"
+					android:id="@+id/rightpercentage">
+				</Spinner>
+
+			</TableRow>
+				<TableRow android:orientation="horizontal"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:id="@+id/tableRowTextThree" android:visibility="visible"
+				android:layout_gravity="fill_horizontal|bottom">
+				<Button android:id="@+id/previewbutton"
+					android:layout_height="wrap_content" android:layout_width="wrap_content"
+					android:text="Preview" />
+				<Button android:id="@+id/savebutton" android:layout_height="wrap_content"
+					android:layout_width="wrap_content" android:text="Save" />
+
+				<Spinner android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/horizontalorvertical">
+				</Spinner>
+			</TableRow>
+
+			<ImageView android:id="@+id/ImagePreview"
+				android:layout_width="fill_parent" android:layout_height="wrap_content" />
+
+
+		</LinearLayout>
+	</ScrollView>
+
+</LinearLayout>
